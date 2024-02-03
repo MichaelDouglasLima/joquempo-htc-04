@@ -14,6 +14,10 @@ const $scorePlayer2 = document.querySelector('#score-2');
 
 const $winnerTitle = document.querySelector('.winner-title');
 
+const $resetButton = document.querySelector('#button-reset');
+
+$resetButton.addEventListener('click', resetAll);
+
 // Adding Events to Player 1 Inputs
 $buttonStonePlayer1.addEventListener('click', handleStone1Move);
 $buttonPaperPlayer1.addEventListener('click', handlePaper1Move);
@@ -83,6 +87,19 @@ function resetBattleField() {
 function resetMoveVariables() {
     movePlayer1 = '';
     movePlayer2 = '';
+}
+
+function resetWinnerScoreVariables() {
+    player1Score = 0;
+    player2Score = 0;
+}
+
+function resetAll() {
+    resetBattleField();
+    resetMoveVariables();
+    resetWinnerScoreVariables();
+    printWinnerScore();
+    $winnerTitle.innerHTML = 'Jogador 1 VS Jogador 2';
 }
 
 // Player 1 Actions
