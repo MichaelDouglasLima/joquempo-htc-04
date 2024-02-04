@@ -145,6 +145,27 @@ body {
     transform: scaleX(-1);
 }
 
+.button-move-stop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ff0000;
+    background-color: #ff0000;
+    color: #ffffff;
+    width: 220px;
+    height: 80px;
+    border-radius: 8px;
+    font-size: 44px;
+    font-weight: 500;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.button-move-stop:hover {
+    background-color:#ffffff;
+    color: #ff0000;
+}
+
 @media screen and (max-width: 720px) {
     body {
         padding: 1%;
